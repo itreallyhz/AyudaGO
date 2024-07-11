@@ -1,0 +1,128 @@
+{% include 'user/usersidebar.html' %}
+{% block content %}
+<html>
+        <head>
+          <link rel="stylesheet" href="/static/css/view.css">
+        </head>
+        <body>
+                  <div class="container">
+                <form class="form-reg"  method="get" >
+                  <h1>YOUR INFORMATION </h1>
+                  <div class="form-group">
+                    <div class="row">
+                     <label>First Name</label>
+                      <div class="col-md-3">
+                        <div class="fname">
+                       <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name"  value="{{ user.first_name }}"  readonly/>	
+                     </div>
+                    </div>
+                     <label>Middle Initial</label>
+                     <div class="col-md-3">
+                      <div class="mi">
+                       <input type="text" id="middle_name" name="middle_name" class="form-control" placeholder="Middle Initial" value="{{ user.middle_name }}"  readonly/>
+                       </div>
+                      </div>
+                     </div>
+                     </div>
+                     <div class="form-group">
+                      <div class="row">
+                       <label>Last Name</label>
+                        <div class="col-md-3">
+                          <div class="lname">
+                         <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name" value="{{ user.last_name }}" readonly/>
+                       </div>
+                      </div>
+                       <label for="birthday">Birth Date</label>
+                       <div class="col-md-3">
+                        <div class="bday">
+                         <input type="date" id="birthday" name="birth_date" placeholder="Your Birth Date.." value="{{ user.birth_date }}"  readonly/>
+                          </div>
+                        </div>
+                         </div>
+                       </div>
+                       <div class="form-group">
+                         <div class="row">
+                         <label>House No</label>
+                          <div class="col-md-3">
+                            <div class="houseno">
+                           <input type="text" id="house_no" name="house_no" class="form-control" placeholder="House No"  value="{{ user.house_no }}"  readonly/>
+                          </div>
+                        </div>
+                        <div class="text">
+                          <label> Street</label>
+                        </div>
+                          <div class="col-md-3">
+                            <div class="strt">
+                              <input type="text" id="street" name="street" class="form-control"  value="{{ user.street}}"  readonly/>
+                        </div>
+                           </div>
+                          </div>
+                          </div>
+                          <div class="form-group">
+                           <div class="row">
+                             <label>Vill or Subd</label>
+                            <div class="col-md-3">
+                              <div class="villsubd">
+                            <input type="text"  id="vill" name="vill_subd" class="form-control" placeholder="Village/Subdivision" value="{{user.vill_subd}}"  readonly/>
+                            </div>
+                          </div>
+                            <label>Barangay</label>
+                            <div class="col-md-3">
+                              <div class="brgy">
+                                <input type="text"  id="vill" name="brgy" class="form-control" value="{{user.brgy}}"  readonly/>
+                            </div>
+                             </div>
+                            </div>
+                            </div>
+                            <div class="form-group">
+                             <div class="row">
+                               <label>Municipality</label>
+                              <div class="col-md-3">
+                                <div class="municipality">
+                                  <input type="text"  id="vill" name="city" class="form-control" value="{{user.city}}"  readonly/>
+                              </div>
+                            </div>
+                              <label>ValidID</label>
+                              <div class="col-md-3">
+                                <div class="id">
+                               <img src="{{user.valid_ID}}" >
+                              </div>
+                             </div>
+                            </div>
+                           </div>
+                           <div class="form-group">
+                             <div class="row">
+                               <label>Phone Number</label>
+                              <div class="col-md-3">
+                                <div class="phone">
+                               <input type="text"  id="phone_num" name="phone_num" class="form-control" placeholder="Phone Number"  value="{{ user.phone_num }}"  readonly/>
+                              </div>
+                            </div>
+                            <div class="emailtext">
+                              <label>Email</label>
+                            </div>
+                              <div class="col-md-3">
+                                <div class="email">
+                               <input type="text"  name="user_email" id="user_email" class="form-control" placeholder="Email" value="{{ user.user_email }}"  readonly/>
+                             </div>
+                            </div>
+                           </div>
+                         </div>
+                         <div class="form-group">
+                           <div class="row">
+                             <label>Ewallet</label>
+                            <div class="col-md-3">
+                              <div class="ewallet">
+                             <input type="text"  id="ewallet" name="ewallet" class="form-control" placeholder="Ewallet" value="{{ user.ewallet }}"  readonly/>
+                            </div>
+                          </div>
+                            <div class="col-md-3">
+                             <input type="hidden"  id="status"  name="acc_status" class="form-control"/>
+                            </div>
+                           </div>
+                         </div>
+                         </form>
+                       </div>
+                     </body>
+      </html>
+      {% endblock content %}

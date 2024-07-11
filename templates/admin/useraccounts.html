@@ -1,0 +1,55 @@
+{% include 'admin/adminsidebar.html' %}
+{% block content %}
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/css/useraccount.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="border">
+        <h1>PENDING ACCOUNTS</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Valid ID</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for user in users %}
+            <form class="form-contact"  method="get">
+            <tr>
+              <td>
+                <span class="first-name">{{ user.first_name }}</span>
+                <span class="middle-name">{{ user.middle_name }}</span>
+                <span class="last-name">{{ user.last_name }}</span>
+              </td>
+              <td>
+                <span class="user-email">{{ user.user_email }}</span>
+              </td>
+              <td>
+                <img src="static/img/valid_id/VALID_ID1.jpg" alt="Valid ID" class="valid_id_img">
+              </td>
+            
+              <td>
+                <button class="approve" data-user-id="{{ user.user_ID }}"><i class="fa-sharp fa-solid fa-circle-check fa-lg"></i> Approve</button>
+               
+                <button class="decline" data-decline-id="{{ user.user_ID }}"><i class="fa-solid fa-circle-xmark fa-lg"></i> Decline</button>
+              </td>
+            </tr>
+            {% endfor %}
+          </form>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="/static/js/tempass.js"></script>
+    <script src="/static/js/decline.js"></script>
+  </body>
+</html>
+{% endblock content %}

@@ -1,0 +1,25 @@
+{% include 'admin/adminsidebar.html' %}
+
+<head>
+    <link rel="stylesheet" href="/static/css/chart.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+
+<body>
+    <div class="chart-container">
+        <div class="chart-bar">
+            {{ bar_chart_html | safe }}
+        </div>
+    </div>
+    
+    <div class="chart-container">
+        <div class="chart-pie">
+            {{ pie_chart_html | safe }}
+        </div>
+    </div>
+    <div class="chart-container">
+    <div class="user-count-chart">
+        {{ user_count_chart_html | safe }}
+    </div>
+</div>
+</body>

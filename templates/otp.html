@@ -1,0 +1,24 @@
+{% block content %}
+<head>
+    <title>Register</title>
+ <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+ <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap">
+ <link rel="stylesheet"  href="/static/css/otp.css"/>
+ <script src="/static/js/insertotp.js" defer></script>
+</head>
+<body>
+    <div class="container">
+    <form class="form-reg" action="/inputotp" method="get" name="regForm" >
+        <h2 align="center">Verify</h2><br>
+        <p>Please enter the OTP code that has been sent to your email.</p>
+           <div class="otp-container">
+            <input type="text" class="otp-input"  name="otp" required/>
+            <input type="text" class="otp-input" name="otp"disabled />
+            <input type="text" class="otp-input" name="otp" disabled />
+            <input type="text" class="otp-input" name="otp" disabled />
+          </div>
+             <button type="submit" class="proceed">Proceed</button>
+        </form>
+    </div>
+</body>
+{% endblock content %}

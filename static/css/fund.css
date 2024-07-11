@@ -1,0 +1,120 @@
+body{
+  background-image: url("/static/img/gradient5.png");
+  background-size: cover;
+}
+h3{
+  text-align: center;
+  font-size: 35px;
+  padding-top: 20px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+label{
+  color: black;
+  font-size: 17px;
+  margin-left: 100px;
+  align-items: center;
+  font-family: sans-serif;
+}
+.bigborder{
+  background-color: rgb(245, 245, 245, 0.8);
+  width: 50%;
+  height: 70%;
+  margin-left: 300px;
+  margin-top: 3%;
+  border-radius: 20px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+
+  
+}
+
+.container{
+  align-items: center;
+  padding: 10px;
+}
+
+.align{
+  display: flex;
+  margin-left: -30px;
+}
+.row{   
+padding: 15px;
+  margin-left: 10%;
+}
+
+/*Fund records*/
+
+.Fund  {
+  color: #bc3908;
+  font-size: 20px;
+  margin-left: 350px;
+  padding-top: 5px;
+}
+.Fund:hover {
+  color: blue;
+  text-decoration: none;
+}
+.confirm-button{
+  margin-left: 160px;
+  margin-top: 8%;
+  margin-bottom: 20px;
+  
+}
+.confirm-button .confirm{
+  background-color: #ff7400;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;   
+  width: 100px; 
+}
+.confirm-button .confirm:hover {
+  background-color: #bc3908;
+}
+input[type="checkbox"]{
+  cursor: pointer;
+}
+.check label{
+  margin-left: 120px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+
+/*amount and account*/
+input[type="date"], input[type="text"] {
+  height: 40px; /* set the same height for both elements */
+  width: 200px; /* set the same width for both elements */
+  border-radius: 6px;
+  padding: 10px;
+  margin-left: 10px;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-right: 30px;
+  margin-left: 150px;
+}
+input[type="date"]{
+ cursor: pointer;
+
+}
+.exit{
+      
+  color: #b51b43;
+  outline: none;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 340px;
+}
+p{
+  text-align: center;
+  padding-bottom: 10px;
+  font-family: sans-serif;
+  color: black;
+  font-weight: bold;
+}
+.h3{
+  font-weight: 400;
+  font-family: 'Times New Roman', Times, serif;
+}

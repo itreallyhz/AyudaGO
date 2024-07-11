@@ -1,0 +1,48 @@
+{% include 'admin/adminsidebar.html' %}
+{% block content%}
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="/static/css/fundrec.css" />
+</head>
+
+<body>
+<div class="table_header">
+  <p><strong>Fund Records</strong></p>
+  <div class="drop"> 
+
+  </div> 
+    <input type="search" class="search" id="searchInputFund" placeholder="Search by Date" />
+  </div>
+    <div class="row">
+  <div class="col-12">
+    <table class="table ">
+      <thead>
+        <tr>
+          <th >DATE</th>
+          <th >AMOUNT</th>
+          <th >NAME</th>
+          <th >PAYMENT METHOD</th>
+          <th>STATUS</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in users %}
+        {% for fund_entry in user.fund_entries %}
+        <tr>
+          <td>{{fund_entry.fund_date}}</td>
+          <td>{{fund_entry.fund_amount}}</td>
+          <td>{{user.first_name}} {{user.middle_name}} {{user.last_name}}</td>
+          <td>{{user.ewallet}}</td>
+          <td>{{fund_entry.fund_status}}</td>
+        </tr>
+     {% endfor %} 
+     {% endfor %} 
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/static/js/searchbar_fund.js" defer></script>
+</body>
+{% endblock content%}

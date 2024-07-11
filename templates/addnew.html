@@ -1,0 +1,147 @@
+{% include 'admin/adminsidebar.html' %}
+{% block content %}
+ 
+<head>
+    <title>Add New Info</title>
+ <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+ <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap">
+ <link rel="stylesheet"  href="/static/css/add.css"/>
+</style>
+</head>
+<body>
+<form class="form-reg" action="/addprofile" method="post">
+    <h2 align="center">Add new information</h2>
+    <div class="form-group">
+      <div class="row">
+       <label>First Name</label>
+        <div class="col-md-3">
+          <div class="fname">
+         <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name" required/>	
+       </div>
+      </div>
+       <label>Middle Initial</label>
+       <div class="col-md-3">
+        <div class="mi">
+         <input type="text" id="middle_name" name="middle_name" class="form-control" placeholder="Middle Initial" required/>
+         </div>
+        </div>
+       </div>
+       </div>
+       <div class="form-group">
+        <div class="row">
+         <label>Last Name</label>
+          <div class="col-md-3">
+            <div class="lname">
+           <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name" required/>
+         </div>
+        </div>
+         <label for="birthday">Birth Date</label>
+         <div class="col-md-3">
+          <div class="bday">
+           <input type="date" id="birthday" name="birth_date" placeholder="Your Birth Date.." required/>
+            </div>
+          </div>
+           </div>
+         </div>
+         <div class="form-group">
+           <div class="row">
+           <label>House No</label>
+            <div class="col-md-3">
+              <div class="houseno">
+             <input type="text" id="house_no" name="house_no" class="form-control" placeholder="House No"  required/>
+            </div>
+          </div>
+          <div class="text">
+            <label> Street</label>
+          </div>
+            <div class="col-md-3">
+              <div class="strt">
+             <select name="street" id="street" class="form-control" required/>
+               <option value="" disabled selected>Streets</option>
+                  <option value="Acacia St.">Acacia St.</option>
+              <option value="Adelaide St.">Adelaide St.</option>
+                <option value="Adelfa St.">Adelfa St.</option>
+           </select>
+          </div>
+             </div>
+            </div>
+            </div>
+            <div class="form-group">
+             <div class="row">
+               <label>Vill or Subd</label>
+              <div class="col-md-3">
+                <div class="villsubd">
+              <input type="text"  id="vill" name="vill_subd" class="form-control" placeholder="Village/Subdivision"  required/>
+              </div>
+            </div>
+              <label>Barangay</label>
+              <div class="col-md-3">
+                <div class="brgy">
+               <select name="brgy" id="brgy" class="form-control" required/>
+                 <option value="" disabled selected>Barangay</option>
+                    <option value="Brgy 171">Brgy. 171</option>
+               </select>
+              </div>
+               </div>
+              </div>
+              </div>
+              <div class="form-group">
+               <div class="row">
+                 <label>Municipality</label>
+                <div class="col-md-3">
+                  <div class="municipality">
+                 <select name="city" id="city" class="form-control" required/>
+                   <option value="" disabled selected>Municipality</option>
+                      <option value="Caloocan City">Caloocan City</option>
+               </select>
+                </div>
+              </div>
+              <div class="idtext">
+                <label>ValidID</label>
+              </div>
+                <div class="col-md-3">
+                  <div class="id">
+                 <input type="file" id="validID" name="valid_ID"  accept= "image/*" required/>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="form-group">
+               <div class="row">
+                 <label>Phone Number</label>
+                <div class="col-md-3">
+                  <div class="phone">
+                 <input type="text"  id="phone_num" name="phone_num" class="form-control" placeholder="Phone Number"  required/>
+                </div>
+              </div>
+              <div class="emailtext">
+                <label>Email</label>
+              </div>
+                <div class="col-md-3">
+                  <div class="email">
+                 <input type="text"  name="user_email" id="user_email" class="form-control" placeholder="Email"  required/>
+               </div>
+              </div>
+             </div>
+           </div>
+           <div class="form-group">
+             <div class="row">
+               <label>Ewallet</label>
+              <div class="col-md-3">
+                <div class="ewallet">
+               <input type="text"  id="ewallet" name="ewallet" class="form-control" placeholder="Ewallet"  required/>
+              </div>
+            </div>
+              <div class="col-md-3">
+               <input type="hidden"  id="acc_status" value="1" name="acc_status" class="form-control"/>
+              </div>
+             </div>
+           </div>  
+          <button class="click" >Submit</button>
+    </form> 
+  </div>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="/static/js/addnewtempass.js"></script>
+</body>
+{% endblock content %}
+    

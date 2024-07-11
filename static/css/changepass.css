@@ -1,0 +1,66 @@
+
+body{
+	padding-top: 100px;
+	background-color: #ff7400;
+  }
+
+  .form-reg{
+	margin: 0 auto;
+	max-width: 400px;
+	background-color: rgb(255, 255, 255);     
+	box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+	border-radius: 25px;
+	padding: 15px;
+  margin-top: 80px;
+  }
+  .form-reg h2{
+	color: black;
+	 font-family: "Poppins", sans-serif;
+	 font-size: 30px;
+	 text-align: center;
+	 margin-bottom: -10px;
+
+	}
+.btn{
+     display: inline-block;
+			padding: 10px 20px;
+			color: white;
+			text-align: center;
+			font-size: 16px;
+			margin-right: 10px;
+
+	}
+.cancel {
+    background-color: gray;
+    color: white;
+    border:none;
+    display: inline-block;
+}
+ .cancel:hover {
+	background-color: lightgray;
+	}
+
+.send{
+  background-color: #ff7400;
+  color: white;
+  border:none;
+  display: inline-block;
+}
+.send:hover {
+	background-color: #fedebe;
+	}
+	.container {
+		text-align: center;
+	  }
+	p{
+        font-size: 20px;
+
+    }
+  
+		input[type="text"]{
+      margin-left: 100px;
+       width: -50px;
+      height: -20px;
+    }
+
+	

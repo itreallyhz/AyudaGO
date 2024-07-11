@@ -1,0 +1,71 @@
+.container {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .border{
+    background-color: #fff;
+    color: #000;
+    width: 99%;
+    border-radius: 20px;
+    height: 88%;
+    position: relative;
+    margin-left: 5px;
+    padding-top: 50px;
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+    border:white;
+    padding-top: 20px;
+}
+
+
+th,td{
+    background-color: #f8edeb;
+    border-bottom: 1px solid #dddddddd;
+    padding: 10px 20px;
+    word-break: break-all;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+tr:hover td{
+    color: #f77f00;
+    cursor: pointer;
+    background-color: #f6f9fc;
+}
+td button{
+    background-color: none;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    padding-left: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+   
+}
+td button:hover{
+    background-color: #fedebe;
+}
+/*buttons approve and decline*/
+button .approve{
+    background-color: green;
+    color: white;
+}
+.approve:hover{
+    background-color: lightgreen;
+    color: black;
+}
+button .decline{
+    background-color: red;
+    color: white;
+}
+.decline:hover{
+    background-color: lightcoral;
+    color: black;
+}

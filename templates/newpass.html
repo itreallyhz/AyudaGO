@@ -1,0 +1,28 @@
+{% block content %}
+<head>
+    <title>Change Password</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/static/css/confirmpass.css"/>
+</head>
+<body>
+    <div class="container">
+        <form class="form-reg" action="/change_pass" method="post" >
+            <h2 align="center">Change Password</h2><br>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="password" name="new_pass" class="form-control" placeholder="New password" id="new-pass" required>	
+                        <input type="password" name="confirm_pass" class="form-control" placeholder="Confirm password" id="confirm-pass" required>
+                    </div>
+                </div>
+            </div>
+           <input type="hidden" name="user_email" required>
+
+            
+            <button type="submit" name="proceed"  class="btn save">Save</button>
+        </form>
+    </div>
+   
+</body>
+{% endblock %}

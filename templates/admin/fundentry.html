@@ -1,0 +1,33 @@
+{% include 'admin/adminsidebar.html' %}
+
+<html>
+          <head>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+          <link rel="stylesheet" href="/static/css/fund.css">
+          <link rel="stylesheet" href="/static/css/home.css">  
+        </head>
+        {% block content %}
+        <body>
+          <div class="container">
+            <form action="/addfund" method="post">
+              <div class="bigborder">
+                <h3>Fund Entries</h3><br>
+                <p>Please select the amount and enter details to proceed.</p>
+                <div class="row">
+                  <label>Input Amount</label>
+                  <input type="text" name="fund_amount" class="form-control" required/><br><br>
+                  <label>Fund Date</label>
+                  <input type="date" name="fund_date" required/><br><br>
+                  <div class="confirm-button">
+                    <button class="confirm" type="submit">Proceed</button>
+                  </div>
+                  <a href="/fundrec" class="Fund" onclick="fundrec()"><i class="fa-sharp fa-solid fa-folder"></i> Records</a> 
+                </div>
+              </div>
+            </form>
+          </div>
+          <script src="static/js/fundstat.js"></script>      
+        </body>
+      </html>
+    {% endblock %}
+      

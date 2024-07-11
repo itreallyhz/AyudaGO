@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+button[type="submit"] {
+    width: 60%;
+    height: 50px;
+    background-color: 	 white;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-top: 25px;
+    color: #ff7400;
+    border-color: white;
+
+  }
+  button[type="submit"]:hover {
+    transition: 0.5s;
+    background-color: #ff7400;
+    color: white;
+  }
+ 
+h2{
+	text-align: center;
+   line-height: 1;
+   color: black;
+}

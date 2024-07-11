@@ -1,0 +1,63 @@
+{% include 'admin/adminsidebar.html' %}
+{% block content %}
+  <head>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/static/css/posting.css">
+        </head>
+      <body>
+        
+         <div class="container">
+      <h1>POSTING OF ANNOUNCEMENTS</h1>
+        <form method="post" action="/addannouncement" class="form-reg">
+          <div class="gallery-item">
+              <div class="form-group">
+                <div class="row">
+                  <label>Announcement Title</label>
+                   <input type="text" name="a_title" class="form-input" placeholder="Announcement Title" required/>	
+                </div>
+              </div>
+              <div class="form-group">
+                 <div class="row">
+                    <label for="a_date">Date</label>
+                    <input type="date"  name="a_date" required/>
+                  </div>
+              </div>
+              <div class="form-group">
+                 <div class="row">
+                      <label for="a_time">Time</label>
+                      <input type="time" name="a_time" class="form-input" required/>
+                 </div>
+              </div>
+              <div class="form-group">
+                    <div class="row">
+                  <label>Location</label>
+                       <input type="text" name="a_location" class="form-input" placeholder="Location" required/>
+                    </div>
+              </div>
+              <div class="form-group">
+                    <div class="row">
+                  <label>Description</label>
+                       <textarea name="a_description" class="form-input" placeholder="Description" required/></textarea>
+                    </div>
+              </div>
+                <button onclick="posts()"  class="form-submit">Post</button>
+                <script>
+                  async function posts() {
+                  const response = await fetch('/posts');
+                  const result = await response.text();
+                  window.location.href = '/posts';
+                  }
+                </script>
+               </form>
+              </div>
+               <a href="/posthistory" class="viewhistory" onclick="posthistory()"><i class="fa fa-history" style="font-size:24px"></i> View History</a>
+                <script>
+                  async function posthistory() {
+                  const response = await fetch('/posthistory');
+                  const result = await response.text();
+                  window.location.href = '/posthistory';
+                  }
+                </script>
+      </div>
+    </body>
+{% endblock content %}

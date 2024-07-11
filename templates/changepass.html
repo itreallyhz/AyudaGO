@@ -1,0 +1,41 @@
+{%block content%}
+<head>
+    <title>Register</title>
+ <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+ <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap">
+ <link rel="stylesheet"  href="/static/css/changepass.css"/>
+</style>
+</head>
+<body>
+    <div class="container">
+    <form class="form-reg" action="/code" method="get" name="regForm" >
+        <h2 align="center">Change of Password</h2><br>
+        <p>Enter your phone number</p>
+        <div class="form-group">
+         <div class="row">
+           <div class="col-md-6">
+            <input type="text" name="phone" class="form-control" placeholder="Phone Number" id="Phone" required>	
+          </div>
+          </div>
+          </div>
+             <button onclick="home()" type="submit" name="code" value="code" class="btn cancel">Cancel</button>
+             <script>
+             async function home() {
+              const response = await fetch('/home');
+              const result = await response.text();
+              window.location.href = '/home';
+            }
+            </script>
+           
+             <button onclick="code()" type="submit" name="code" value="code" class="btn send">Send</button>
+             <script>
+             async function code() {
+              const response = await fetch('/code');
+              const result = await response.text();
+              window.location.href = '/code';
+            }
+         </script>
+   
+        </form>
+    </div>
+   {%endblock content%}

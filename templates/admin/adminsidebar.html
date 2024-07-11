@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AyudaGo</title>
+  <!-- Link Styles -->
+  <link rel="stylesheet" href="static/css/a_sidebar.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo_details">
+      <div class="logo_name"><img src="/static/img/logo.png" alt="logo" width="100" height="100"><br>AyudaGo</h2>
+        </div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="/dashboard">
+          <i class="bx bx-grid-alt"></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+        <a href="/profiles">
+          <i class="bx bx-user"></i>
+          <span class="link_name">Profiling</span>
+        </a>
+        <span class="tooltip">Profiling</span>
+      </li>
+      <li>
+        <a href="/fundentry">
+          <i class="bx bx-money"></i>
+          <span class="link_name">Fund Entry</span>
+        </a>
+        <span class="tooltip">Fund Entry</span>
+      </li>
+      <li>
+        <a href="/posts">
+          <i class="bx bx-message"></i>
+          <span class="link_name">Posts</span>
+        </a>
+        <span class="tooltip">Posts</span>
+      </li>
+      <li>
+        <a href="/accounts">
+          <i class="bx bx-folder"></i>
+          <span class="link_name">User Accounts</span>
+        </a>
+        <span class="tooltip">User Accounts</span>
+      </li>
+      
+  </ul></div>
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="container-fluid">
+    <a class="navbar-brand ">Hi Admin!</a>
+    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+            <li class="nav-item dropdown"> 
+              <button class="btn">
+                <img src="static/img/logo.png" alt="user logo">
+              </button>
+                <div class="dropdown-content">
+                      <a href="/" onclick="root()"class="link">Logout</a>
+                      <script>
+                      async function root() {
+                      const response = await fetch('/');
+                      const result = await response.text();
+                      window.location.href = '/';
+                  }
+            </script>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <script src="static/js/sidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+
+ 
+  {% block content %}
+<head>
+    <title>Register</title>
+ <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;500;700&display=swap">
+ <link rel="stylesheet"  href="static/css/reg.css">
+</head>
+<body>
+    <div class="container">
+    <form class="form-reg" action="/add" method="post" >
+  <a href="/" class="back"><i class="fa fa-arrow-left" style="font-size:20px"></i></a>
+        <h2 align="center">REGISTER</h2>
+        <div class="form-group">
+                    <div class="row">
+                     <label>First Name <h7>*</h7></label>
+                      <div class="col-md-3">
+                        <div class="fname">
+                       <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name" required/>	
+                     </div>
+                    </div>
+                     <label>Middle Initial <h7>*</h7></label>
+                     <div class="col-md-3">
+                      <div class="mi">
+                       <input type="text" id="middle_name" name="middle_name" class="form-control" placeholder="Middle Initial" required/>
+                       </div>
+                      </div>
+                     </div>
+                     </div>
+                     <div class="form-group">
+                      <div class="row">
+                       <label>Last Name <h7>*</h7></label>
+                        <div class="col-md-3">
+                          <div class="lname">
+                         <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name" required/>
+                       </div>
+                      </div>
+                       <label for="birthday">Birth Date <h7>*</h7></label>
+                       <div class="col-md-3">
+                        <div class="bday">
+                         <input type="date" id="birthday" name="birth_date" placeholder="Your Birth Date.." required/>
+                          </div>
+                        </div>
+                         </div>
+                       </div>
+                       <div class="form-group">
+                         <div class="row">
+                         <label>House No <h7>*</h7></label>
+                          <div class="col-md-3">
+                            <div class="houseno">
+                           <input type="text" id="house_no" name="house_no" class="form-control" placeholder="House No"  required/>
+                          </div>
+                        </div>
+                        <div class="text">
+                          <label>Street <h7>*</h7></label>
+                        </div>
+                          <div class="col-md-3">
+                            <div class="strt">
+                           <select name="street" id="street" class="form-control" required/>
+                             <option value="" disabled selected>Streets</option>
+                                <option value="Acacia St.">Acacia St.</option>
+                            <option value="Adelaide St.">Adelaide St.</option>
+                              <option value="Adelfa St.">Adelfa St.</option>
+                              <option value="Banaba St.">Banaba St.</option>
+                              <option value="Dahlia St.">Dahlia St.</option>
+                              <option value="Dao St.">Dao St.</option>
+                              <option value="Emerald St.">Emerald St.</option>
+                              <option value="Evergreen St.">Evergreen St.</option>
+                              <option value="Gardenia St.">Gardenia St.</option>
+                              <option value="Ilang-Ilang St.">Ilang-Ilang St.</option>
+                         </select>
+                        </div>
+                           </div>
+                          </div>
+                          </div>
+                          <div class="form-group">
+                           <div class="row">
+                             <label>Vill or Subd</label>
+                            <div class="col-md-3">
+                              <div class="villsubd">
+                            <input type="text"  id="vill" name="vill_subd" class="form-control" placeholder="Village/Subdivision"  required/>
+                            </div>
+                          </div>
+                            <label>Barangay</label>
+                            <div class="col-md-3">
+                              <div class="brgy">
+                                <input type="text" name="brgy" id="brgy" value="Brgy. 171" class="form-control" disabled/>
+                            </div>
+                             </div>
+                            </div>
+                            </div>
+                            <div class="form-group">
+                             <div class="row">
+                               <label>Municipality</label>
+                              <div class="col-md-3">
+                                <div class="municipality">
+                                  <input type="text" name="municipality" id="municipality" value="Caloocan City" class="form-control" disabled/>
+                               </div>
+                            </div>
+                            <div class="idtext">
+                              <label>ValidID <h7>*</h7></label>
+                            </div>
+                              <div class="col-md-3">
+                                <div class="id">
+                               <input type="file" id="valid" name="valid_ID"  accept= "image/*" required/>
+                              </div>
+                             </div>
+                            </div>
+                           </div>
+                           <div class="form-group">
+                             <div class="row">
+                               <label>Phone Number <h7>*</h7></label>
+                              <div class="col-md-3">
+                                <div class="phone">
+                               <input type="text"  id="phone_num" name="phone_num" class="form-control" placeholder="Phone Number"  required/>
+                              </div>
+                            </div>
+                            <div class="emailtext">
+                              <label>Email <h7>*</h7></label>
+                            </div>
+                              <div class="col-md-3">
+                                <div class="email">
+                               <input type="text"  name="user_email" id="user_email" class="form-control" placeholder="Email"  required/>
+                             </div>
+                            </div>
+                           </div>
+                         </div>
+                         <div class="form-group">
+                           <div class="row">
+                             <label>Ewallet <h7>*</h7></label>
+                            <div class="col-md-3">
+                              <div class="ewallet">
+                             <input type="text"  id="ewallet" name="ewallet" class="form-control" placeholder="Ewallet"  required/>
+                            </div>
+                          </div>
+                            <div class="col-md-3">
+                              <input type="hidden"  id="tempass" name="temp_pass" value=""/>
+                            </div>
+                            <div class="col-md-3">
+                              <input type="hidden"  id="status" value="pending" name="acc_status" class="form-control"/>
+                            </div>
+                           </div>
+                         </div>
+                         <button  type="submit" name="Register" value="Register" class="click">Next</button>
+                         </form>
+                       </div>
+                      </div>
+                     </body>
+    {% endblock content %}

@@ -1,0 +1,20 @@
+{% include 'user/usersidebar.html' %}
+<html>
+        <head>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+            <link rel="stylesheet" href="/static/css/statclaimed.css">
+        </head>
+        <body>
+            <div class= "container">
+                    <form class="form-reg" action="/login" method="post" name="regForm" >
+                        <div class="check-container"><i class="fas fa-check"></i></div>
+                        <h1 class="claim_ayuda" align="center">You can now claim<br>your Ayuda!</h1><br>      
+                        <br>
+                        <h4 class="claim_note" align="center">Please make sure that you have received<br>the ayuda before clicking the claim button.</h4>
+                        <div class="claimed">
+                            <button type="submit" name="claim">Claim</button>   
+                        </div>
+                    </form>
+                </div>
+        </body>
+    </html>

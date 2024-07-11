@@ -1,0 +1,22 @@
+{% block content %}
+     <title>Register</title>
+     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+     <link rel='stylesheet' href='https://unpkg.com/css.gg@2.0.0/icons/css/check-o.css'>
+     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap">
+     <link rel="stylesheet"  href="/static/css/reg2.css"/>
+     </head>
+
+    <body>
+        <div class="container">
+        <form class="form-reg" action="/" method="get" name="regForm" >
+            <div class="loader"></div><br>
+               
+            <h1 align="center">Your registration<br>is still pending for approval.</h1><br>
+            <h4 align="center">Please check your provided contacts<br>for your temporary password.</h4>
+            <br>
+            <br>
+            <h5 align="center">To return to the main page, click the button.</h5>
+                 <button type="submit" name="Register" value="Register" class="click">Proceed</button>
+            </form>
+        </div>
+{% endblock content %}

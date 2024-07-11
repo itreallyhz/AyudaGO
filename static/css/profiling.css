@@ -1,0 +1,93 @@
+body{
+	background-image: url("/static/img/gradient5.png");
+	background-size: cover;
+  }
+.table_header{
+    display: flex;
+  }
+  .table_header p{
+    font-size: 23px;
+    margin-top: 20px;
+    margin-left: 95px;
+    color:black;
+    font-weight: bold;
+  }
+  .search{
+    height: 30px;
+    padding: 10px ;
+    margin: 0 10px;
+    outline: none;
+    border: 1px solid #f77f00;
+    border-radius: 6px;
+    margin-left: 740px;
+    margin-top: 15px;
+  }
+  .add_new {
+    padding: 10px;
+    color: #ffff;
+    background-color: #029cf0;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 10px;
+    height: 10px;
+}
+.add_new:hover {
+    background-color: #022ef0;
+    color: #f6f9fc;
+  }
+
+.table_section{
+    height: 650px;
+    overflow: auto;
+}
+
+table{
+    table-layout: fixed;
+    border:white;
+    margin-left: 15px;
+    
+}
+thead th{
+    position: sticky;
+    top: 0;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+td{
+    background-color: rgb(255, 255, 255, 0.6);
+    border-bottom: 1px solid #dddddddd;
+    word-break: break-all;
+    text-align: center;
+    font-family:sans-serif;
+    font-size: 16px;
+    font-weight:normal;
+
+}
+tr:hover td{
+    color: #e74c3c;
+    background-color: #f6f9fc;
+}
+td button{
+    background-color:#f6f9fc;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    padding-left: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+td button:hover{
+    background-color: #ffb700;
+}
+.col-12{
+    width: 95%;
+    margin-left: 4.5%;
+    border-radius: 20px;
+   
+}

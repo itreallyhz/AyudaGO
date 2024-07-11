@@ -1,0 +1,37 @@
+{% include 'user/usersidebar.html' %}
+{% block content %}
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/fundstatus.css">
+  </head>
+  <body>
+    {% if claim_status =="True" %}
+      <div class="container fund-status-page">
+        <form class="form-reg" name="regForm">
+          <div class="check-container"><i class="fas fa-check"></i></div>
+          <h1 class="claim_ayuda" align="center">You can now claim<br>your Ayuda!</h1><br>
+          <br>
+          <h4 class="claim_note" align="center">Please make sure that you have received<br>the ayuda before clicking the claim button.</h4>
+          <div class="claim">
+            <button type="submit" name="claim">Claim</button>
+          </div>
+        </form>
+      </div>
+    {% else %}
+      <div class="container fund-status-page">
+        <form class="form-reg" name="regForm">
+          <div class="loader"></div><br>
+          <h1 align="center">Your Ayuda<br>is still pending...</h1><br>
+          <br>
+          <h4 align="center">Please check again later</h4>
+          <div class="claim">
+            <button type="submit" name="claim" disabled>Claim</button>
+          </div>
+        </form>
+      </div>
+    {% endif %}
+
+  </body>
+</html>
+{% endblock %}

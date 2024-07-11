@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>User Log In</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+    
+  </head>
+  <body>
+    <script src="/static/js/landing.js" defer></script>
+    {% block content %}
+                <img src="/static/img/brgy.jpg"  class="slide">
+                <img src="/static/img/caloocan.jpg"  class="slide">
+                <img src="/static/img/sportscomplex.jpg"  class="slide">
+                <img src="/static/img/seniors1.jpg" class="slide">
+                <img src="/static/img/seniors2.png" class="slide">
+                <img src="/static/img/seniors3.jpg" class="slide">
+                <img src="/static/img/seniors4.jpg" class="slide">
+    <div class="details">
+      {% for a in announcements %}
+     <div class="row">
+        <h1>Announcement</h1>
+     </div>
+        <div class="row"> 
+        <h3>{{a.a_title}}</h3>   	
+     </div>	
+        <div class="announce">
+        <h5>{{a.a_date}}</h5>
+        </div>
+      <div class="announce">
+      <h5>{{a.a_time}}</h5>
+          </div>
+        <div class="announce">
+          <h4>{{a.a_location}}</h4>
+        </div>
+       <div class="announce">
+        <h5>{{ a.a_description }}</h5>
+        </div><br>
+
+  {% endfor %}
+</div>
+    <div class="center">
+  <form action="/login" method="post">
+    <div class="logo-container">
+        <img src="/static/img/Logo.png" class ="logo" >
+        <h1>AyudaGo</h1>
+    </div>
+    <div class="txtfield">
+        <input type="text" id="username" name="username" required>
+        <span></span>
+        <label for="username">Email</label>
+    </div>
+    <div class="txtfield">
+        <input type="password" id="password" name="password" required>
+        <span></span>
+        <label for="password">Password</label>
+    </div>
+    <div class="forgotpassword"> <a href="/forgotpassword" onclick="forgotpassword()">Forgot Password?</a>
+          <script>
+            async function forgotpassword() {
+            const response = await fetch('/forgotpassword');
+            const result = await response.text();
+            window.location.href = '/forgotpassword';
+            }
+            </script>
+    </div>
+    <div class="pass">
+          <button  type="submit" name="login" class="click">Login</button>    
+    </div>
+    <div class="reg_link">Don't have an account? <a href="/agreement" onclick="agreement()">Register</a>
+          <script>
+            async function agreement() {
+            const response = await fetch('/agreement');
+            const result = await response.text();
+            window.location.href = '/agreement';
+            }
+          </script>
+    </div>
+    </form>
+</html>
+{% endblock content%}

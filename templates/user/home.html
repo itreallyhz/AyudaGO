@@ -1,0 +1,24 @@
+{% include 'user/usersidebar.html' %}
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="/static/css/home.css">
+        
+         </head>
+    <body>
+             <!--Automatic Slideshow-->
+             <header class="intro">
+                <div class="intro-slideshow">
+                <img src="/static/img/brgy.jpg" class="slideshow-img">
+                <img src="/static/img/caloocan.jpg" class="slideshow-img">
+                <img src="/static/img/sportscomplex.jpg" class="slideshow-img">
+                <img src="/static/img/seniors1.jpg" class="slideshow-img">
+                <img src="/static/img/seniors2.png" class="slideshow-img">
+                <img src="/static/img/seniors3.jpg" class="slideshow-img">
+                <img src="/static/img/seniors4.jpg" class="slideshow-img">
+                    </div>
+                </header>
+        <script src="/static/js/userhome.js" defer></script>
+        <input type="hidden" name = "access_token" value= "{{access_token}}"> 
+         </body>
+    </html>

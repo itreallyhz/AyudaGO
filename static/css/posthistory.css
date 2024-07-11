@@ -1,0 +1,73 @@
+
+body{
+    background-image: url("/static/img/gradient5.png");
+    background-size: cover;
+  }
+ h1{
+	color: black;
+	font-family: "Poppins", sans-serif;
+	font-size: 30px;
+	text-align: center;
+    margin-left: 10px;
+    font-size: 30px;
+	font-weight: 600;
+    padding-bottom: 30px;
+    text-shadow: -1px -1px 0 #fff,  
+    1px -1px 0 #fff,
+   -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+    padding-top: 10px;
+	} 
+    thead th{
+        position: sticky;
+        top: 0;
+        background-color: whitesmoke;
+        color: black;
+        font-size: 17px;
+        text-align: center;
+    }
+    
+td{
+    background-color: rgb(255, 255, 255, 0.6);
+    border-bottom: 1px solid #dddddddd;
+    word-break: break-all;
+    text-align: center;
+    font-size: 16px;
+    font-weight:normal;
+    
+}
+.container {
+		text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+	  }
+     
+    h3{
+            font-size: 20px;
+             font-weight: bold;
+             color: var(--dark);
+             margin-left: 150px;
+        }
+table{
+            table-layout: fixed;
+            border:white;
+            margin-left: 15px;
+        }        
+tr:hover td{
+    color: #e74c3c;
+    background-color: #f6f9fc;
+}
+td button{
+    background-color:#f6f9fc;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    padding-left: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+td button:hover{
+    background-color: #ffb700;
+}
+   

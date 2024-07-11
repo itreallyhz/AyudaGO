@@ -1,0 +1,31 @@
+
+{% block content %}
+<html>
+
+<head>
+  <title>Terms and Conditions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"  href="static/css/agreement.css">
+</head>
+<body>
+    <form class="form-reg">
+       <a href="/" class="backpage"><i class="fa fa-close" style="font-size:20px"></i></a>
+  <h1>Terms and Conditions</h1>
+  <p>In accordance with the <strong>Data Privacy Law of 2012 (RA 10173)</strong> the residents' information is used exclusively for AyudaGo System.The AyudaGo system is designed to provide assistance and support to seniors in need. The personal details collected  will remain strictly confidential. Only authorized administrators and officials of the barangay will have access to this information.</p>
+  <p> This will acknowledge the significance of the data provided by seniors and are committed to upholding the principles outlined in the <strong>Data Privacy Act of 2012 (RA 10173). </strong></p>
+ 
+   <label>By agreeing to this form, you are granting us permission to gather and utilize your information in accordance with the terms outlined in the <strong>Data Privacy Notice.</strong></label>
+    </div>
+    <button  type="submit"  onclick="register()" class="click">Proceed</button>
+    <script>
+        async function register() {
+        const response = await fetch('/reg');
+        const result = await response.text();
+        window.location.href = '/reg';
+        }
+      </script>
+    </form>
+</body>
+
+</html>
+{% endblock content %}

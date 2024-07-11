@@ -1,0 +1,45 @@
+{% include 'user/usersidebar.html' %}
+
+<!--TEXT FORM -->
+<link rel="stylesheet" href="/static/css/announcements.css">
+</head>
+<body>
+ {% block content %}
+    <div class="container">
+      <h1 align="center">ANNOUNCEMENTS</h1>
+        <div class="form-reg">
+          {% for a in announcements %}
+          <div class="form-group">
+            <div class="row">
+              <label for="a_title">Announcement Title</label>
+               <input type="text" name="a_title" class="form-input" value="{{a.a_title}}" readonly/>	
+            </div>
+          </div>
+          <div class="form-group">
+             <div class="row">
+                <label for="a_date">Date</label>
+                <input type="date"  name="a_date" value="{{a.a_date}}" readonly/>
+              </div>
+          </div>
+          <div class="form-group">
+             <div class="row">
+                  <label for="a_time">Time</label>
+                  <input type="time" name="a_time" class="form-input" value="{{a.a_time}}" readonly/>
+             </div>
+          </div>
+          <div class="form-group">
+                <div class="row">
+              <label>Location</label>
+                   <input type="text" name="a_location" class="form-input" value="{{a.a_location}}" readonly/>
+                </div>
+          </div>
+          <div class="form-group">
+                <div class="row">
+              <label>Description</label>
+                   <textarea name="a_description" class="form-input" value="" readonly>{{a.a_description}}</textarea>
+                </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+{% endblock content%}

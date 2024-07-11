@@ -1,0 +1,134 @@
+
+body{
+	background-image: url("/static/img/gradient5.png");
+	background-size: cover;
+  }
+/*Posts.html POST ANNOUNCEMENT*/
+.form-input {
+	/*	formtext*/
+	  display: block;
+	  width: 125%;
+      height: 100%;
+	  padding: 10px;
+	  border-radius: 5px;
+	  border: 1px solid #ccc;
+	  font-size: 16px;
+	  margin-left: 65px;
+	}
+.form-submit{
+	/* Styles for form submit button */
+	  background-color: #ff7400;
+	  color: white;
+	  padding: 10px 20px;
+	  border: none;
+	  border-radius: 15px;
+	  font-size: 16px;
+	  cursor: pointer;
+	  margin-left: 5px;
+      padding-bottom: 10px;
+	                         
+	}
+.form-submit:hover {
+	  background-color: #bc3908;
+	}
+	/*TITLE FOR POSTING OF ANNOUNCEMENTS*/
+	
+/* orange round square */
+.form-reg{
+		position: absolute;
+		top: 58%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 75%;
+        height: 75%;
+		background-color: rgb(255, 255, 255, 0.5);
+		box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+		border-radius: 25px;
+		padding: 15px;
+        margin-left: 50px;
+	  }
+	   h1{
+		 color: black;
+		 font-family: 'Times New Roman', Times, serif;
+		 font-size: 30px;
+		 text-align: center;
+		 padding: 10px 0;
+		 padding-bottom: 30px;
+         margin-left: 450px;
+		font-weight: 600;
+		margin-top: 20px;
+		color: var(--dark);
+        margin-bottom: 20px;
+		}
+	.container {
+		text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+	  }
+    .row input[type="text"], select, label{
+		height: 50px; /* set the same height for both elements */
+		width: 350px; /* set the same width for both elements */
+		border-radius: 6px;
+		padding: 10px;
+		border: none;
+		margin-left: 60px;
+		text-align: center;
+		margin-top: 1%;
+	  }
+	 .row  textarea{
+		height: 50px; /* set the same height for both elements */
+		width: 350px; /* set the same width for both elements */
+		border-radius: 6px;
+		border: none;
+		margin-left: 60px;
+		text-align: center;
+	  }
+	  select{
+		cursor: pointer;
+	  }
+      
+    .row input[type="date"]{
+		height: 50px; /* set the same height for both elements */
+		width: 350px; /* set the same width for both elements */
+		border-radius: 6px;
+		padding: 10px;
+		border: none;
+		margin-left: 60px;
+		cursor: pointer;
+		text-align: center;
+	  }
+      .row input[type="time"], label{
+		height: 50px; /* set the same height for both elements */
+		width: 350px; /* set the same width for both elements */
+		border-radius: 6px;
+		padding: 10px;
+		border: none;
+		margin-left: 60px;
+		text-align: center;
+	  }
+	  .col{
+		padding: 10px;
+	  }
+	  label{
+		font-family: serif;
+		font-size: 18px;
+        font-weight: bold;
+		text-align: center;
+	}
+	  .form-group{
+		display: flex;
+		flex-direction: row;
+	  }
+	  
+	  .viewhistory {
+		color: #d92626;
+		text-decoration: none;
+        padding-right: 40px;
+        font-size: 20px;
+	  }
+	  .viewhistory:hover {
+		color: green;
+		text-decoration: none;
+	  }
+	  

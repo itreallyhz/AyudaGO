@@ -1,0 +1,128 @@
+body{
+	padding-top: 100px;
+	background-color: #ff7400;
+  }
+
+  .form-reg{
+	margin: 0 auto;
+	max-width: 400px;
+	height: 290px;
+	background-color: rgb(255, 255, 255);     
+	box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+	border-radius: 25px;
+	padding: 15px;
+  margin-top: 30px;
+  }
+  .form-reg h2{
+	color: black;
+	 font-family: "Poppins", sans-serif;
+	 font-size: 30px;
+	 text-align: center;
+	 margin-bottom: -10px;
+
+	}
+.btn{
+         display: inline-block;
+			padding: 10px 20px;
+			color: white;
+			text-align: center;
+			font-size: 16px;
+			margin-left: 10px;
+            margin-right: 20px;
+  
+	}
+.cancel {
+    background-color: gray;
+    color: white;
+    border:none;
+}
+ .cancel:hover {
+	background-color: lightgray;
+	}
+
+.save{
+  background-color: #ff7400;
+}
+.save:hover {
+	background-color: #fedebe;
+	}
+	.container {
+		text-align: center;
+	  }
+	p{
+        font-size: 20px;
+
+    }
+
+  input[type="password"]{
+        margin-left: 100px;
+        height: 40px; /* set the same height for both elements */
+        width: 300px; /* set the same width for both elements */
+        border-radius: 6px;
+        padding-top: 10px;
+        margin-left: 40px;
+        margin-top: 20px;
+
+       
+      }
+      
+/*. popup = hidden box*/
+.popup {
+    position: relative;
+    top: -150px;
+    left: 220px;
+    margin: 0 auto;
+    width: 430px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    box-shadow:  0 0 500px rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    transform: translate(-50%, -50%) scale(0.1);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+/*.open-popup = visible box*/
+.open-popup{
+    visibility: visible;
+    top: -150px;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img{
+    position: relative;
+    top: 15px;
+    width: 60px;
+    height: 60px;
+}
+
+.popup h2{
+    position: relative;
+    top: 25px;
+}
+
+.popup p{
+    position: relative;
+    top: 25px;
+}
+
+.popup .goback {
+    position: relative;
+    top: 60px;
+    width: 200px;
+    height: 50px;
+    border: 1px solid;
+    background: #ff4d00;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+.popup .goback:hover {
+    background-color: #F68B2B;
+    color: white;
+}
+

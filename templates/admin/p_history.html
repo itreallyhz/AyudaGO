@@ -1,0 +1,48 @@
+{% include 'admin/adminsidebar.html' %}
+<head>
+    <title>History of Announcements</title>
+ <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+ <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap">
+ <link rel="stylesheet"  href="/static/css/posthistory.css"/>
+</style>
+</head>
+{% block content %}
+<body>
+  <div class="table_header">
+<h1 align="center">HISTORY OF ANNOUNCEMENTS</h1>
+<div class="col-12">
+  <table class="table">
+          <thead>
+            <tr>
+              <th >No.</th>
+              <th >Title</th>
+              <th >Date</th>
+              <th>Time</th>
+              <th >Location</th>
+              <th >Description</th>
+              <th >Action</th>
+            </tr>
+          </thead>
+      <tbody >
+    {% for a in announcements %}
+    <tr>
+      <td>{{a.a_ID}}</td>
+      <td>{{a.a_title}}</td>
+      <td>{{a.a_date}}</td>
+      <td>{{a.a_time}}</td>
+      <td>{{a.a_location}}</td>
+      <td>{{ a.a_description }}</td>
+      <td>
+        <button onclick="window.location.href='edit/{{ a.a_ID }}'"><i class="fa-sharp fa-solid fa-pen-to-square" style="color: #255322;"></i> </button>
+        <button onclick="window.location.href='deletepost/{{ a.a_ID }}'"><i class="fa-sharp fa-solid fa-trash-can" style="color: #c70000;"></i> </button>   
+      </td>
+    </tr>
+{% endfor %}
+  </tbody>
+</table>
+</div>
+</body>
+{% endblock content%}
+
+  
